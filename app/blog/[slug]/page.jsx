@@ -9,6 +9,7 @@ import { getAllSlugs, getPostBySlug, getAllPosts, getAllCategories, getFeaturedP
 import { TECHNOLOGIES } from "@/lib/mock-data";
 import { renderBlocks, blocksToPlainText } from "@/lib/render-blocks";
 import { formatDate, estimateReadingTime, SITE_URL, SITE_NAME } from "@/lib/utils";
+import BlogAnalytics from "@/components/BlogAnalytics";
 
 export const revalidate = 60;
 
@@ -86,6 +87,7 @@ export default async function BlogPostPage({ params }) {
           }),
         }}
       />
+      <BlogAnalytics slug={post.slug} />
 
       <main className="flex-1">
         <article className="mx-auto max-w-6xl px-4 pt-10 sm:px-6">

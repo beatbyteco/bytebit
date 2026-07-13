@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_META_DESCRIPTION, SITE_DESCRIPTION } from "@/lib/utils";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // NOTE: next/font/google (Sora + JetBrains Mono) needs network access to
 // fonts.google.com at build time. Re-enable it in your own environment with:
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
       <body className="flex min-h-screen flex-col antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}/>
     </html>
   );
 }

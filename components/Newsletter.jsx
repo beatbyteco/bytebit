@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
+
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -30,6 +32,11 @@ export function Newsletter() {
     );
 
     if (!res.ok) throw new Error();
+    if (res.ok) {
+    sendGAEvent("event", "newsletter_subscribe", {
+      location: "footer",
+    });
+  }
 
     setMessage("🎉 Subscribed Successfully");
 
