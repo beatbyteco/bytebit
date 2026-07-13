@@ -6,7 +6,7 @@ export function Footer({ categories }) {
   return (
     <footer className="mt-20 border-t border-border">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="mb-3 flex items-center gap-2 font-bold">
               {/* <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-background">
@@ -101,6 +101,54 @@ export function Footer({ categories }) {
                   className="text-sm text-muted hover:text-foreground"
                 >
                   Sitemap
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
+              Legal
+            </p>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/legal/disclaimer"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/privacy-policy"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/terms-and-conditions"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/editorial-policy"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  Editorial Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/cookie-policy"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  Cookie Policy
                 </Link>
               </li>
             </ul>
