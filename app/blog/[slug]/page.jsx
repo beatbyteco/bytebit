@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }) {
                   />
                 </div>
               ) : (
-                <div className="mb-10 aspect-video w-full rounded-2xl bg-gradient-to-br from-violet-300 via-purple-300 to-fuchsia-300" />
+                <div className="mb-10 aspect-video w-full rounded-2xl bg-linear-to-br from-violet-300 via-purple-300 to-fuchsia-300" />
               )}
 
               <div className="prose-blog">{renderBlocks(post.content)}</div>
@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }) {
             </div>
 
             <aside className="space-y-6">
-              <AboutCard post={post} />
+              <AboutCard className="hidden md:block" post={post} />
               <FeaturedCard posts={featured} />
               {/* <TechnologiesCard items={TECHNOLOGIES} /> */}
               {/* <CreatingCard posts={related} /> */}
