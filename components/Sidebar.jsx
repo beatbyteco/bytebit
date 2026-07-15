@@ -32,7 +32,7 @@ export function AboutCard({ post }) {
         </div>
         <div>
           <p className="font-semibold leading-tight">{author.name}</p>
-          <p className="text-xs text-muted">Full Stack Developer</p>
+          {/* <p className="text-xs text-muted">Full Stack Developer</p> */}
         </div>
       </div>
       <p className="mb-4 text-sm leading-relaxed text-muted">{author.bio}</p>

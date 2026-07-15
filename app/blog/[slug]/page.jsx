@@ -163,6 +163,7 @@ export default async function BlogPostPage({ params }) {
               )}
 
               {post.author.bio && (
+                <div className="hidden md:block">
                 <div className="mt-12 flex items-start gap-4 rounded-2xl border border-border bg-surface p-6">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/15 text-sm font-bold text-accent">
                     {post.author.name
@@ -175,11 +176,12 @@ export default async function BlogPostPage({ params }) {
                     <p className="mt-1 text-sm leading-relaxed text-muted">{post.author.bio}</p>
                   </div>
                 </div>
+                </div>
               )}
             </div>
 
             <aside className="space-y-6">
-              <AboutCard className="hidden md:block" post={post} />
+              <AboutCard post={post} />
               <FeaturedCard posts={featured} />
               {/* <TechnologiesCard items={TECHNOLOGIES} /> */}
               {/* <CreatingCard posts={related} /> */}
