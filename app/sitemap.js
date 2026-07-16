@@ -1,6 +1,6 @@
 import { getAllPosts, getAllCategories } from "@/lib/strapi";
 import { SITE_URL } from "@/lib/utils";
-
+export const dynamic = "force-dynamic";
 export default async function sitemap() {
   const [posts, categories] = await Promise.all([getAllPosts(), getAllCategories()]);
 
